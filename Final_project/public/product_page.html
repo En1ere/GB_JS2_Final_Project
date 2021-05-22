@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="product-app">
         <div class="top">
 
             <header class="header center">
@@ -19,71 +19,12 @@
                 <div class="header__left">
                     <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN <span
                             class="letter__d">D</span></a>
-                    <form class="header__form" action="#">
-                        <div class="browse">Browse&nbsp;&nbsp;<i class="fas fa-caret-down"></i></div>
-                        <input class="search__text" type="text" placeholder="Search for item...">
-                        <button class="search" type="submit"><img src="img/search.png" alt="search"></button>
-                    </form>
+
+                    <filter-goods ref='filter'></filter-goods>
                 </div>
 
                 <div class="header__right">
-                    <div class="header__cart-div"><a href="#" class="header__cart-link"><img src="img/cart1.png"
-                                alt="cart" class="header__cart-img"></a>
-
-                        <div class="cart__content">
-
-                            <div class="added__product">
-                                <div class="added__img-text">
-                                    <div><img class="added__img" src="img/cart_product1.jpg" alt="product1"></div>
-                                    <div class="added__text">
-                                        <a class="added__link" href="#">Rebox Zane</a>
-                                        <div class="rating__mini">
-                                            <span class="active"></span>
-                                            <span class="active"></span>
-                                            <span class="active"></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <p class="added__price">1 &#215; &#36;250</p>
-                                    </div>
-                                </div>
-                                <a href="#"><i class="fas fa-times-circle added__delete"></i></a>
-
-                            </div>
-
-                            <div class="added__product">
-                                <div class="added__img-text">
-                                    <div><img class="added__img" src="img/cart_product2.jpg" alt="product1"></div>
-                                    <div class="added__text">
-                                        <a class="added__link" href="#">Rebox Zane</a>
-                                        <div class="rating-mini">
-                                            <span class="active"></span>
-                                            <span class="active"></span>
-                                            <span class="active"></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <p class="added__price">1 &#215; &#36;250</p>
-                                    </div>
-                                </div>
-                                <a href="#"><i class="fas fa-times-circle added__delete"></i></a>
-
-                            </div>
-
-                            <div class="cart__total-price">
-                                <p>TOTAL</p>
-                                <p>&#36;500.00</p>
-                            </div>
-
-                            <div class="cart__buttons">
-
-                                <a href="checkout.html" class="cart__button-checkout">Checkout</a>
-                                <a href="#" class="cart__button-cart">Go to cart</a>
-
-                            </div>
-
-                        </div>
-                    </div>
+                    <cart ref='cart'></cart>
 
                     <a href="#" class="button">My Account <i class="fas fa-caret-down"></i></a>
                 </div>
@@ -162,8 +103,9 @@
                     <a href="#" class="breadcrumbs__link breadcrumbs__link-active">New Arrivals </a>
                 </div>
             </div>
-
-            <section class="product__page">
+<handler ref='handler'></handler>
+            <!-- <product-page ref='product-page'></product-page> -->
+            <!-- <section class="product__page">
 
                 <section class="product__page-img-slider">
 
@@ -241,57 +183,30 @@
                             </div>
 
                         </div>
-
-                        <a href="#" class="product__page-description-feature-add-to-cart-link"><img
-                                src="img/cart_red.svg" alt="cart">&nbsp;&nbsp;&nbsp;Add to Cart</a>
+                        <a href="#" class="product__page-description-feature-add-to-cart-link"><i
+                                class="fas fa-shopping-cart"></i> Add to Cart</a>
 
                     </div>
 
                 </div>
+            </section> -->
 
-                <h2 class="product__page-also-like">you may like also</h2>
+            <h2 class="product__page-also-like">you may like also</h2>
 
-                <div class="product__page-also-like-products center">
+            <div class="product__page-also-like-products center">
 
-                    <div class="product">
-                        <a href="#"><img class="product__img" src="img/product_page_like_also1.jpg" alt="photo"></a>
-                        <div class="product__content">
-                            <a href="#" class="product__name">Mango People T-shirt</a>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add">Add to Cart</a>
+                <div class="product">
+                    <a href="#"><img class="product__img" src="img/product_page_like_also1.jpg" alt="photo"></a>
+                    <div class="product__content">
+                        <a href="#" class="product__name">Mango People T-shirt</a>
+                        <p class="product__price">$52.00</p>
                     </div>
-
-                    <div class="product">
-                        <a href="#"><img class="product__img" src="img/product_page_like_also2.jpg" alt="photo"></a>
-                        <div class="product__content">
-                            <a href="#" class="product__name">Mango People T-shirt</a>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add">Add to Cart</a>
-                    </div>
-
-                    <div class="product">
-                        <a href="#"><img class="product__img" src="img/product_page_like_also3.jpg" alt="photo"></a>
-                        <div class="product__content">
-                            <a href="#" class="product__name">Mango People T-shirt</a>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add">Add to Cart</a>
-                    </div>
-
-                    <div class="product">
-                        <a href="#"><img class="product__img" src="img/product_page_like_also4.jpg" alt="photo"></a>
-                        <div class="product__content">
-                            <a href="#" class="product__name">Mango People T-shirt</a>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add">Add to Cart</a>
-                    </div>
-
+                    <a href="#" class="product__add">Add to Cart</a>
                 </div>
+                <!-- <products ref="products"></products> -->
+            </div>
 
-            </section>
+
 
             <div class="feedback catalog__men center">
 
@@ -436,6 +351,14 @@
         </footer>
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts/ErrorComp.js"></script>
+    <script src="scripts/FilterComp.js"></script>
+    <script src="scripts/MiniCartComp.js"></script>
+    <script src="scripts/ProductComp.js"></script>
+    <script src="scripts/handler.js"></script>
+    <script src="scripts/productPageApp.js"></script>
 </body>
 
 </html>
