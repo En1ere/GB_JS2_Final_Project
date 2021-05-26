@@ -439,8 +439,9 @@ $colorSite: #f16d7f;
     background-color: #ef5b70;
 }
 }
-
-
-
-
-
+.product__add {
+    background-color: inherit;
+    &:hover{
+        cursor: pointer;
+    }
+}

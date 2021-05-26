@@ -39,6 +39,8 @@ $colorSite: #f16d7f;
         &-img {
             margin-right: 20px;
             background-color: #f1f7fa;
+            width: 100px;
+            height: 115px;
         }
         &-quantity {
             width: 50px;
@@ -95,9 +97,14 @@ $colorSite: #f16d7f;
                 border: none;
             }
         }
-        &-delete:hover {
-            color: $colorSite;
-            cursor: pointer;
+        &-delete {
+            font-size: 22px;
+            color: #a4a4a4;
+            &:hover {
+                transition: all 0.3s;
+                color: $colorSite;
+                cursor: pointer;
+            }
         }
     }
     &-buttons {
@@ -173,7 +180,6 @@ $colorSite: #f16d7f;
         }
     }
 }
-
 .total {
     &__sub-text {
         color: #4a4a4a;
@@ -191,6 +197,9 @@ $colorSite: #f16d7f;
         &2 {
             color: #f16d7f;
         }
+    }
+    &__sub-text2, &__grand-text2 {
+        margin-left: 20px;
     }
     &__button-checkout {
         text-transform: uppercase;

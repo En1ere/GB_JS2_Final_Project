@@ -1,0 +1,56 @@
+[
+    {
+        "id_product": 1,
+        "product_name": "Кофта",
+        "price": 200,
+        "img": "img/product1.jpg"
+    },
+    {
+        "id_product": 2,
+        "product_name": "Пальто",
+        "price": 1500,
+        "img": "img/product2.jpg"
+    },
+    {
+        "id_product": 3,
+        "product_name": "Рюкзак",
+        "price": 1000,
+        "img": "img/product3.jpg"
+    },
+    {
+        "id_product": 4,
+        "product_name": "Футболка",
+        "price": 50,
+        "img": "img/product4.jpg"
+    },
+    {
+        "id_product": 5,
+        "product_name": "Толстовка",
+        "price": 950,
+        "img": "img/product5.jpg"
+    },
+    {
+        "id_product": 6,
+        "product_name": "Жилетка",
+        "price": 840,
+        "img": "img/product6.jpg"
+    },
+    {
+        "id_product": 7,
+        "product_name": "Костюм",
+        "price": 4000,
+        "img": "img/product7.jpg"
+    },
+    {
+        "id_product": 8,
+        "product_name": "Пальто 2",
+        "price": 3000,
+        "img": "img/product8.jpg"
+    },
+    {
+        "id_product": 9,
+        "product_name": "Футболка 2",
+        "price": 70,
+        "img": "img/product9.jpg"
+    }
+]
