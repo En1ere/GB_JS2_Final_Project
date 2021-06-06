@@ -28,6 +28,10 @@ $colorSite: #f16d7f;
 }
 .product__page {
         
+    &-img {
+        width: 597px;
+        height: 724px;
+    }
     &-also-like {
         color: #4d4d4d;
         font-size: 24px;
@@ -155,9 +159,13 @@ $colorSite: #f16d7f;
             width: 540px;
             border: 1px solid $colorSite;
             text-align: center;
+            background-color: transparent;
+            transition: all 0.3s;
             &:hover {
                 color: #fff;
                 background-color: $colorSite;
+                cursor: pointer;
+                
             }
         }
     }

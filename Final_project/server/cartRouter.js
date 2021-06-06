@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
-const handler = require('./handler');
 const router = express.Router();
+const handler = require('./handler');
 
 router.get('/', (req, res) => {
     fs.readFile('./server/db/userCart.json', 'utf-8', (err, data) => {
@@ -23,6 +23,6 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     handler(req, res, 'del', './server/db/userCart.json');
-})
+});
 
 module.exports = router;

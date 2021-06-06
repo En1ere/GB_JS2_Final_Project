@@ -4,6 +4,9 @@ Vue.component('cart-page', {
             cartRef: this.$parent.$refs.cart,
         }
     },
+    mounted() {
+        console.log(this)
+    },
     props: ['cartItems'],
     template: `<div class="shopping__cart-products">
                     <p v-if="! cartRef.cartItems.length">Корзина пуста</p>

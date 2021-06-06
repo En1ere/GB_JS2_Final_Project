@@ -1,4 +1,4 @@
-const cartApp = new Vue({
+const productPageApp = new Vue({
     el: '#product-app',
     methods: {
         getJson(url) {
@@ -45,7 +45,4 @@ const cartApp = new Vue({
                 });
         },
     },
-    mounted() {
-        console.log(this)
-    }
 })

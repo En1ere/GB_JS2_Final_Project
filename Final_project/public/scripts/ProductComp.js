@@ -3,6 +3,12 @@ Vue.component('products', {
         return {
             products: [],
             filtered: [],
+            product: {
+                id_product: 0,
+                product_name: '',
+                price: 0,
+                img: '',
+            },
         }
     },
     methods: {
@@ -10,6 +16,18 @@ Vue.component('products', {
             let regexp = new RegExp(search, 'i');
             this.filtered = this.products.filter(el => regexp.test(el.product_name));
         },
+
+        goToProductPage(product) {
+            this.$parent.postJson('/api/product', product)
+                .then(data => {
+                    if (data.result === 1) {
+                        this.product.id_product = data.id_product,
+                        this.product.product_name = data.product_name,
+                        this.product.price = data.price,
+                        this.product.img = data.img
+                    }
+                });
+        }
     },
     mounted() {
         this.$parent.getJson('/api/products')
@@ -19,6 +37,7 @@ Vue.component('products', {
                     this.filtered.push(el);
                 }
             });
+        console.log(this)
     },
     template: `<section class="product__box-catalog">
                     <product v-for="product of filtered" :key="product.id_product" :product="product"></product>
@@ -28,10 +47,10 @@ Vue.component('products', {
 Vue.component('product', {
     props: ['product'],
     template: `<div class="product">
-                    <a href="../product_page.html" @click='this.$root.$refs.handler.goToProductPage(product)'><img class="product__img" :src="product.img" alt="Some_img"></a>
+                    <a href="../product_page.html" @click='$root.$refs.products.goToProductPage(product)'><img class="product__img" :src="product.img" alt="Some_img"></a>
                     <div class="product__content">
                         <a href="#" class="product__name">{{ product.product_name }}</a>
-                        <p class="product__price">&#36;{{ product.price }}</p>
+                        <p class="product__price">&#36;{{ product.price }} </p>
                     </div>
                     <button class="product__add" @click='$root.$refs.cart.addProduct(product)'>Add to Cart</button>
                     <div class="product__catalog-hover">
@@ -40,67 +59,3 @@ Vue.component('product', {
                     </div>
                 </div>`
 });
-
-// Vue.component('product-page', {
-//     props: ['product'],
-//     template: `<section class="product__page">
-
-//                     <section class="product__page-img-slider">
-//                         <a href="#" class="product__page-img-slider-link"><i class="fas fa-angle-left"></i></a>
-//                         <img :src="this.$root.$refs.handler.productPage.img" alt="product_img">
-//                         <a href="#" class="product__page-img-slider-link"><i class="fas fa-angle-right"></i></a>
-//                     </section>
-
-//                     <div class="product__page-description">
-//                         <div class="product__page-description-charachteristic">
-//                             <h3 class="product__page-description-head">WOMEN COLLECTION</h3>
-//                             <div class="product__page-description-pagination">
-//                                 <a href="#" class="product__page-description-pagination-link"><i
-//                                         class="far fa-window-minimize"></i></a><a href="#"
-//                                     class="product__page-description-link product__page-description-pagination-link-active"><i
-//                                         class="far fa-window-minimize"></i></a><a href="#"
-//                                     class="product__page-description-pagination-link"><i
-//                                         class="far fa-window-minimize"></i></a>
-//                             </div>
-
-//                             <h2 class="product__page-description-head2">{{ this.$root.$refs.handler.productPage.product_name }}</h2>
-//                             <p class="product__page-description-text">Compellingly actualize fully researched processes
-//                                 before proactive outsourcing. Progressively syndicate collaborative architectures before
-//                                 cutting-edge services. Completely visualize parallel core competencies rather than
-//                                 exceptional portals.</p>
-//                             <div class="product__page-description-specifications">
-//                                 <p class="product__page-description-specification">MATERIAL: <span
-//                                         class="product__page-description-specification2">COTTON</span></p>
-//                                 <p class="product__page-description-specification">DESIGNER: <span
-//                                         class="product__page-description-specification2">BINBURHAN</span></p>
-//                             </div>
-//                             <p class="product__page-description-price">&#36;{{ this.$root.$refs.handler.productPage.price }}</p>
-//                         </div>
-
-//                         <div class="product__page-description-feature">
-//                             <div class="product__page-description-feature-input">
-//                                 <div class="product__page-description-feature-color">
-//                                     <h2 class="product__page-description-feature-head">CHOOSE COLOR</h2>
-//                                     <select class="product__page-description-feature-select">
-//                                         <option value="red">Red</option>
-//                                     </select>
-//                                 </div>
-
-//                                 <div class="product__page-description-feature-size">
-//                                     <h2 class="product__page-description-feature-head">CHOOSE SIZE</h2>
-//                                     <select class="product__page-description-feature-select">
-//                                         <option value="XXL">XXL</option>
-//                                     </select>
-//                                 </div>
-//                                 <div class="product__page-description-feature-quantity">
-//                                     <h2 class="product__page-description-feature-head">QUANTITY</h2>
-//                                     <input type="number" class="product__page-description-feature-select" placeholder="2">
-//                                 </div>
-
-//                             </div>
-//                             <button class="product__page-description-feature-add-to-cart-link" @click='$root.$refs.cart.addProduct(product)
-//                             ><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-//                         </div>
-//                     </div>
-//                 </section>`
-// })

@@ -478,5 +478,70 @@
         "name": "Пальто",
         "action": "change",
         "time": "8:07:14 pm, 20 May 2021"
+    },
+    {
+        "name": "Кофта",
+        "action": "add",
+        "time": "12:45:59 am, 07 Jun 2021"
+    },
+    {
+        "name": "Пальто",
+        "action": "change",
+        "time": "12:53:31 am, 07 Jun 2021"
+    },
+    {
+        "name": "Пальто",
+        "action": "change",
+        "time": "12:56:37 am, 07 Jun 2021"
+    },
+    {
+        "name": "Футболка",
+        "action": "add",
+        "time": "12:58:51 am, 07 Jun 2021"
+    },
+    {
+        "name": "Кофта",
+        "action": "change",
+        "time": "1:38:06 am, 07 Jun 2021"
+    },
+    {
+        "name": "Футболка",
+        "action": "del",
+        "time": "1:38:13 am, 07 Jun 2021"
+    },
+    {
+        "name": "Кофта",
+        "action": "change",
+        "time": "1:38:14 am, 07 Jun 2021"
+    },
+    {
+        "name": "Кофта",
+        "action": "del",
+        "time": "2:00:13 am, 07 Jun 2021"
+    },
+    {
+        "name": "Пальто",
+        "action": "change",
+        "time": "2:00:15 am, 07 Jun 2021"
+    },
+    {
+        "name": "Пальто",
+        "action": "change",
+        "time": "2:00:16 am, 07 Jun 2021"
+    },
+    {
+        "name": "Рюкзак",
+        "action": "add",
+        "time": "2:00:20 am, 07 Jun 2021"
+    },
+    {
+        "name": "Пальто",
+        "action": "change",
+        "time": "2:00:28 am, 07 Jun 2021"
+    },
+    {
+        "name": "Рюкзак",
+        "action": "del",
+        "time": "2:00:35 am, 07 Jun 2021"
     }
 ]

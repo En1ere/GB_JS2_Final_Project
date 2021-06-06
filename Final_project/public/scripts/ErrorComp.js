@@ -18,7 +18,7 @@ Vue.component('error', {
         <div class="json__error" v-if='showError'>
             <div class="json__error-window">
                 <button class="json__error-btn" @click='setError("")'>&times;</button>
-                <p>{{textError}}</p>
+                <p class='json__error-text'>{{textError}}</p>
             </div>
         </div>`
 });

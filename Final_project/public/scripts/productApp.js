@@ -1,4 +1,4 @@
-const cartApp = new Vue({
+const productPageApp = new Vue({
     el: '#product__page',
     methods: {
         getJson(url) {
