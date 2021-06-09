@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand</title>
+    <title>Checkout</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/e266bfc7e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="wrapper" id="catalog-app">
+    <div class="wrapper">
         <div class="top">
 
             <header class="header center">
@@ -19,21 +19,80 @@
                 <div class="header__left">
                     <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN <span
                             class="letter__d">D</span></a>
-
-                    <filter-goods ref='filter'></filter-goods>
+                    <form class="header__form" action="#">
+                        <div class="browse">Browse&nbsp;&nbsp;<i class="fas fa-caret-down"></i></div>
+                        <input class="search__text" type="text" placeholder="Search for item...">
+                        <button class="search" type="submit"><img src="img/search.png" alt="search"></button>
+                    </form>
                 </div>
 
                 <div class="header__right">
-                    <cart ref='cart'></cart>
+                    <div class="header__cart-div"><a href="#" class="header__cart-link"><img src="img/cart1.png"
+                                alt="cart" class="header__cart-img"></a>
+
+                        <div class="cart__content">
+
+                            <div class="added__product">
+                                <div class="added__img-text">
+                                    <div><img class="added__img" src="img/cart_product1.jpg" alt="product1"></div>
+                                    <div class="added__text">
+                                        <a class="added__link" href="#">Rebox Zane</a>
+                                        <div class="rating__mini">
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <p class="added__price">1 &#215; &#36;250</p>
+                                    </div>
+                                </div>
+                                <a href="#"><i class="fas fa-times-circle added__delete"></i></a>
+
+                            </div>
+
+                            <div class="added__product">
+                                <div class="added__img-text">
+                                    <div><img class="added__img" src="img/cart_product2.jpg" alt="product1"></div>
+                                    <div class="added__text">
+                                        <a class="added__link" href="#">Rebox Zane</a>
+                                        <div class="rating-mini">
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <p class="added__price">1 &#215; &#36;250</p>
+                                    </div>
+                                </div>
+                                <a href="#"><i class="fas fa-times-circle added__delete"></i></a>
+
+                            </div>
+
+                            <div class="cart__total-price">
+                                <p>TOTAL</p>
+                                <p>&#36;500.00</p>
+                            </div>
+
+                            <div class="cart__buttons">
+
+                                <a href="checkout.html" class="cart__button-checkout">Checkout</a>
+                                <a href="#" class="cart__button-cart">Go to cart</a>
+
+                            </div>
+
+                        </div>
+                    </div>
 
                     <a href="#" class="button">My Account <i class="fas fa-caret-down"></i></a>
                 </div>
 
             </header>
-            
+
             <nav class="center">
                 <ul class="menu">
-                    <li class="menu__list"><a href="#" class="menu__link menu__link-active">Home</a></li>
+                    <li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
                     <li class="menu__list menu__list-drop"><a href="catalog_men.html" class="menu__link">Man</a>
                         <div class="drop">
                             <div class="drop__flex">
@@ -93,83 +152,103 @@
                 </ul>
             </nav>
 
-            <div class="promo">
-                <div class="promo__content center">
-                    <img class="promo__line" src="img/line.png" alt="line">
-                    <p class="promo__text"><span class="promo__text1">THE BRAND</span><br>
-                        OF LUXERIOUS <span class="promo__text2">FASHION</span></p>
+            <div class="breadcrumbs center">
+                <div>
+                    <h2 class="new__arrivals">New Arrivals</h2>
+                </div>
+                <div class="breadcrumbs__links">
+                    <a href="#" class="breadcrumbs__link">Home</a> /
+                    <a href="#" class="breadcrumbs__link">Men</a> /
+                    <a href="#" class="breadcrumbs__link breadcrumbs__link-active">New Arrivals </a>
                 </div>
             </div>
 
-            <div class="trends center">
+            <section class="checkout__section center">
 
-                <div class="trends__left">
+                <ul>
+                    <li class="checkout__section-list checkout__section-list-active"><a href="#"
+                            class="checkout__section-link">01.&nbsp;&nbsp;Shipping Adress</a></li>
 
-                    <div class="men"><a class="trends__text" href="#">hOT dEAL<br><span class="trends__text2">FOR
-                                MEN</span></a></div>
+                    <div class="shipping__address">
 
-                    <div class="purse"><a class="trends__text" href="#">LUXIROUS &amp; trendy<br><span
-                                class="trends__text2">ACCESORIES</span></a>
+                        <div class="shipping__address-left">
+
+                            <h3 class="shipping__address-head">Check as a guest or register</h3>
+
+                            <p class="shipping__address-text-small">Register with us for future convenience</p>
+
+                            <form action="#">
+
+                                <div class="shipping__address-radios">
+                                    <div><input name="register" type="radio" value="guest"
+                                            class="shipping__address-radio"><span
+                                            class="shipping__address-radio-text">checkout as guest</span></div>
+                                    <div><input name="register" checked type="radio" value="register"
+                                            class="shipping__address-radio"><span
+                                            class="shipping__address-radio-text">register</span></div>
+                                </div>
+
+                                <h3 class="shipping__address-head">register and save time</h3>
+                                <p class="shipping__address-text-small">Register with us for future convenience</p>
+
+                                <div class="shipping__address-text-small-list">
+                                    <p class="shipping__address-text-small2">&raquo; Fast and easy checkout</p>
+                                    <p class="shipping__address-text-small2">&raquo; Easy access to your order history
+                                        and status</p>
+                                </div>
+
+                                <input type="submit" value="Continue" class="checkout__button">
+
+                            </form>
+
+                        </div>
+
+                        <div class="shipping__address-right">
+
+                            <div class="register__below">
+                                <h3 class="shipping__address-head">Already registed?</h3>
+
+                                <a href="#" class="login__below">Please log in below</a>
+                            </div>
+
+                            <form action="#">
+
+                                <p class="shipping__address-head2">EMAIL ADDRESS</p>
+                                <input type="email" name="login" class="checkout__input">
+
+                                <p class="shipping__address-head2">PASSWORD <span
+                                        class="required__fields-star">&#42;</span></p>
+                                <input type="password" name="password" class="checkout__input">
+
+                                <p class="required__fields-star">* Required Fileds</p>
+
+                                <input type="submit" value="LOG IN" class="checkout__button">
+
+                                <a href="#" class="forgot__password">Forgot Password ?</a>
+
+                            </form>
+
+                        </div>
+
                     </div>
 
-                </div>
+                    <li class="checkout__section-list"><a href="#" class="checkout__section-link">02.&nbsp;&nbsp;BILLING
+                            INFORMATION</a></li>
+                    <li class="checkout__section-list"><a href="#"
+                            class="checkout__section-link">03.&nbsp;&nbsp;SHIPPING
+                            INFORMATION</a></li>
+                    <li class="checkout__section-list"><a href="#"
+                            class="checkout__section-link">04.&nbsp;&nbsp;SHIPPING
+                            METHOD</a></li>
+                    <li class="checkout__section-list"><a href="#" class="checkout__section-link">05.&nbsp;&nbsp;PAYMENT
+                            METHOD</a></li>
+                    <li class="checkout__section-list"><a href="#" class="checkout__section-link">06.&nbsp;&nbsp;ORDER
+                            REVIEW</a></li>
+                </ul>
 
-                <div class="trends__right">
-                    <div class="women"><a class="trends__text" href="#">30% offer<br><span
-                                class="trends__text2">women</span></a></div>
-                    <div class="kid"><a class="trends__text" href="#">new arrivals<br><span class="trends__text2">FOR
-                                kids</span></a></div>
-                </div>
+            </section>
 
-
-            </div>
-
-            <div>
-                <h2 class="featured">Featured Items</h2>
-                <p class="featured2">Shop for items based on what we featured in this week</p>
-            </div>
-            
-            <products ref="products"></products>
-            
-            <div class="button__browse">
-                <a class="button button2" href="catalog_men.html">Browse All Product <i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
-
-            <div class="bonus center">
-
-                <div class="bonus__left">
-                    <p class="bonus__text">30&#37; <span class="bonus__text1">OFFER</span><br><span
-                            class="bonus__text2">FOR WOMEN</span></p>
-                </div>
-
-                <div class="bonus__right">
-
-                    <div class="bonus__content bonus__content1">
-                        <img src="img/car.svg" alt="car">
-                        <p class="bonus__description"><span class="bonus__header">Free Delivery</span><br>Worldwide
-                            delivery on all. Authorit <br> tively morph next-generation innov <br> tion with extensive
-                            models.</p>
-                    </div>
-
-                    <div class="bonus__content bonus__content2">
-                        <img src="img/percent.svg" alt="per">
-                        <p class="bonus__description"><span class="bonus__header">Sales &amp;
-                                discounts</span><br>Worldwide delivery on all. Authorit <br> tively morph
-                            next-generation innov <br> tion with extensive models.</p>
-                    </div>
-
-                    <div class="bonus__content bonus__content3">
-                        <img src="img/crown.svg" alt="crown">
-                        <p class="bonus__description"><span class="bonus__header">Quality assurance</span><br>Worldwide
-                            delivery on all. Authorit <br> tively morph next-generation innov <br> tion with extensive
-                            models.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="feedback center">
+            <div class="feedback feedback__catalog-men center">
 
                 <article>
                     <div class="article1">
@@ -310,17 +389,8 @@
             </p>
 
         </footer>
-
         <error ref='error'></error>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="scripts/ErrorComp.js"></script>
-    <script src="scripts/FilterComp.js"></script>
-    <script src="scripts/MiniCartComp.js"></script>
-    <script src="scripts/ProductComp.js"></script>
-    <script src="scripts/handler.js"></script>
-    <script src="scripts/catalogApp.js"></script>
 </body>
 
 </html>
