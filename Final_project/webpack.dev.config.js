@@ -34,17 +34,8 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     name: 'img/[name].[ext]',
-                    outputPath: '/img'
                 },
             },
-            // {
-            //     test: /\.(png|jpg|svg|gif)$/,
-            //         loader: 'file-loader',
-            //         options: {
-            //             name: '[name].[ext]',
-            //             outputPath: '/img'
-            //           },
-            // },
         ]
     },
     plugins: [

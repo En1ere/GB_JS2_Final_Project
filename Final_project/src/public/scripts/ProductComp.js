@@ -30,14 +30,15 @@ Vue.component('products', {
         }
     },
     mounted() {
-        this.$parent.getJson('/api/products')
+        
+        console.log(this)
+        this.$root.getJson('/api/products')
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
                     this.filtered.push(el);
                 }
             });
-        console.log(this)
     },
     template: `<section class="product__box-catalog">
                     <product v-for="product of filtered" :key="product.id_product" :product="product"></product>
@@ -52,7 +53,7 @@ Vue.component('product', {
                         <a href="#" class="product__name">{{ product.product_name }}</a>
                         <p class="product__price">&#36;{{ product.price }} </p>
                     </div>
-                    <button class="product__add" @click='$root.$refs.cart.addProduct(product)'>Add to Cart</button>
+                    <button class="product__add" @click='$root.$refs["main-header"].$refs.cart.addProduct(product)'>Add to Cart</button>
                     <div class="product__catalog-hover">
                         <a href="#" class="product__add-reload"><i class="fas fa-retweet"></i></a>
                         <a href="#" class="product__add-like"><i class="far fa-heart"></i></a>

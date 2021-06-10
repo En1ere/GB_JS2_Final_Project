@@ -1,14 +1,16 @@
 Vue.component('cart-page', {
-    data() {
-        return {
-            cartRef: this.$root.$refs["main-header"].$refs.cart,
-        }
-    },
-    mounted() {
-        console.log(this)
-    },
-    props: ['cartItems'],
-    template: `<div class="shopping__cart-products">
+  data() {
+    return {
+      cartRef: this.$root.$refs["main-header"].$refs.cart
+    };
+  },
+
+  mounted() {
+    console.log(this);
+  },
+
+  props: ['cartItems'],
+  template: `<div class="shopping__cart-products">
                     <p v-if="! cartRef.cartItems.length">Корзина пуста</p>
 
                     <cart-item-page ref='cartItemPage' v-for='item of cartRef.cartItems' :key='item.id_product' :cart-item="item" @remove="cartRef.remove"></cart-item-page>
@@ -16,8 +18,8 @@ Vue.component('cart-page', {
                 </div>`
 });
 Vue.component('cart-item-page', {
-    props: ['cartItem'],
-    template: `
+  props: ['cartItem'],
+  template: `
                 <div class="shopping__cart-product">
 
                 <div class="shopping__cart-product-description">
@@ -46,11 +48,10 @@ Vue.component('cart-item-page', {
                 </div>
             </div>`
 });
-
 Vue.component('cart-price-page', {
-    template: `<div class="shopping__cart-bottom-total">
+  template: `<div class="shopping__cart-bottom-total">
                     <p class="total__sub-text">Sub total<span class="total__sub-text2">&#36;{{this.$root.$refs["main-header"].$refs.cart.calcTotalSum}}</span></p>
                     <p class="total__grand-text">GRAND TOTAL<span class="total__grand-text2">&#36;{{this.$root.$refs["main-header"].$refs.cart.calcTotalSum}}</span></p>
                     <a href="#" class="total__button-checkout">proceed to checkout</a>
                 </div>`
-})
+});
