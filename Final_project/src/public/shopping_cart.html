@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e266bfc7e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="cart-app" class="wrapper">
+        <div class="top">
+
+            <main-header ref='main-header'></main-header>
+            <catalog-navigation ref='catalog-navigation'></catalog-navigation>
+            <catalog-breadcrumbs ref='catalog-breadcrumbs'></catalog-breadcrumbs>
+            <cart-content ref='cart-content'></cart-content>
+            <main-feedback ref='main-feedback'></main-feedback>
+            <main-info ref='main-info'></main-info>
+
+        </div>
+
+        <main-footer ref='main-footer'></main-footer>
+        <error ref='error'></error>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts/ErrorComp.js"></script>
+    <script src="scripts/FilterComp.js"></script>
+    <script src="scripts/MiniCartComp.js"></script>
+    <script src="scripts/cartComp.js"></script>
+    <script src="scripts/handler.js"></script>
+    <script src="scripts/MainPageComp.js"></script>
+    <script src="scripts/cartApp.js"></script>
+</body>
+
+</html>

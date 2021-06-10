@@ -1,0 +1,34 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": 6,
+            "product_name": "Жилетка",
+            "price": 840,
+            "img": "img/product6.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 5,
+            "product_name": "Толстовка",
+            "price": 950,
+            "img": "img/product5.jpg"
+        },
+        {
+            "quantity": 2,
+            "id_product": 9,
+            "product_name": "Футболка 2",
+            "price": 70,
+            "img": "img/product9.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 7,
+            "product_name": "Костюм",
+            "price": 4000,
+            "img": "img/product7.jpg"
+        }
+    ]
+}
